@@ -33,7 +33,11 @@ const render = () => {
         <div class="site">
            <div class="logo">${node.logo[0]}</div>
            <div class="link">${removeX(node.url)}</div>
-           <div class="close">X</div>
+           <div class="close">
+            <svg class="icon">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+           </div>
         </div>
       </li>`).insertBefore($lastLi);
     $li.on("click", () => {
